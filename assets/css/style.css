@@ -1,18 +1,19 @@
 :root {
-  --bg: #050816;
-  --bg-alt: #0e1020;
-  --card-bg: #101429;
+  --bg: #f4f5fb;
+  --bg-alt: #ffffff;
+  --card-bg: #ffffff;
   --accent: #ff7a18;
   --accent-2: #ff3d81;
-  --text: #f5f7ff;
-  --muted: #c4c7e0;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.55);
+  --text: #171827;
+  --muted: #6b6f90;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
   --radius-lg: 18px;
   --radius-xl: 26px;
   --radius-pill: 999px;
   --nav-h: 72px;
 }
+
 
 /* Global resets */
 *,
@@ -26,8 +27,9 @@ body {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at top left, #1b2748, #050816 55%);
+  background: radial-gradient(circle at top left, #ffe9df, #f4f5fb 45%, #e3f2fd);
 }
+
 
 img,
 video {
@@ -46,8 +48,9 @@ video {
 }
 
 .section-alt {
-  background: rgba(6, 12, 40, 0.9);
+  background: var(--bg-alt);
 }
+
 
 .section-title {
   font-size: 2rem;
@@ -65,14 +68,11 @@ video {
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(14px);
-  background: linear-gradient(
-    to bottom,
-    rgba(5, 8, 22, 0.96),
-    rgba(5, 8, 22, 0.8),
-    transparent
-  );
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
 }
+
 
 .nav-container {
   display: flex;
@@ -145,8 +145,9 @@ video {
 .btn-nav {
   padding: 8px 18px;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(15, 23, 42, 0.12);
 }
+
 
 /* Mobile nav toggle */
 .nav-toggle {
@@ -180,26 +181,27 @@ video {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 0% 0%, rgba(255, 122, 24, 0.12), transparent 55%),
-    radial-gradient(circle at 100% 0%, rgba(255, 61, 129, 0.25), transparent 60%),
+    radial-gradient(circle at 0% 0%, rgba(255, 122, 24, 0.16), transparent 55%),
+    radial-gradient(circle at 100% 0%, rgba(255, 61, 129, 0.3), transparent 60%),
     url("../img/fronthalloutsidewide.jpeg");
-
   background-size: cover;
   background-position: center;
-  filter: saturate(1.1) brightness(0.7);
+  filter: saturate(1.1) brightness(0.85);
   transform: scale(1.02);
 }
+
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     120deg,
-    rgba(5, 8, 22, 0.96),
-    rgba(5, 8, 22, 0.75),
-    rgba(5, 8, 22, 0.92)
+    rgba(15, 23, 42, 0.92),
+    rgba(24, 35, 90, 0.78),
+    rgba(18, 80, 118, 0.85)
   );
 }
+
 
 .hero-content {
   position: relative;
@@ -312,12 +314,13 @@ video {
 }
 
 .about-photo-card {
-  background: linear-gradient(145deg, #131833, #070a1f);
+  background: var(--card-bg);
   border-radius: var(--radius-xl);
   padding: 12px;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-subtle);
 }
+
 
 .about-photo-card img {
   border-radius: calc(var(--radius-xl) - 8px);
@@ -337,12 +340,13 @@ video {
 }
 
 .feature-card {
-  background: radial-gradient(circle at top left, #1f2445, #0b0f25);
+  background: var(--card-bg);
   border-radius: var(--radius-lg);
   padding: 18px 18px 20px;
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-soft);
 }
+
 
 .feature-card h3 {
   margin-top: 0;
@@ -358,7 +362,7 @@ video {
 }
 
 .gallery-item {
-  background: #050816;
+  background: var(--card-bg);
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--border-subtle);
@@ -407,12 +411,13 @@ video {
 }
 
 .package-card {
-  background: radial-gradient(circle at top left, #242b54, #101326);
+  background: var(--card-bg);
   border-radius: var(--radius-xl);
   padding: 20px 20px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   box-shadow: var(--shadow-soft);
 }
+
 
 .package-card h3 {
   margin-top: 0;
@@ -456,9 +461,10 @@ video {
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-subtle);
   min-height: 260px;
 }
+
 
 .map-wrapper iframe {
   border: 0;
@@ -490,12 +496,13 @@ video {
 }
 
 .contact-form {
-  background: #050816;
+  background: var(--card-bg);
   border-radius: var(--radius-xl);
   padding: 20px 18px 18px;
   border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-soft);
 }
+
 
 .field {
   display: flex;
@@ -513,15 +520,17 @@ video {
   font: inherit;
   padding: 9px 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: #050816;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: #f9fafb;
   color: var(--text);
 }
 
 .field input:focus,
 .field textarea:focus {
   outline: 1px solid var(--accent);
+  background: #ffffff;
 }
+
 
 .btn-full {
   width: 100%;
@@ -530,9 +539,9 @@ video {
 
 /* FOOTER */
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
   padding: 18px 0 22px;
-  background: #040612;
+  background: #ffffff;
 }
 
 .footer-grid {
@@ -544,6 +553,7 @@ video {
   font-size: 0.8rem;
   color: var(--muted);
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {

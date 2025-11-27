@@ -213,9 +213,19 @@ video {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.75rem;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.78);
   margin-bottom: 16px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 .hero h1 {
   font-size: clamp(2.8rem, 5vw, 3.4rem);
@@ -282,14 +292,15 @@ video {
 }
 
 .btn-ghost {
-  background: rgba(5, 8, 22, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: #ffffff;
 }
 
 .btn-ghost:hover {
-  background: rgba(9, 14, 50, 0.9);
+  background: rgba(255, 255, 255, 0.12);
 }
+
 
 /* ABOUT */
 .about-grid {

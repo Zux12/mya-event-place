@@ -227,6 +227,9 @@ video {
 }
 
 
+.hero-subtitle strong {
+  color: #ffe57d; /* slightly darker yellow */
+}
 
 .hero h1 {
   font-size: clamp(2.8rem, 5vw, 3.4rem);

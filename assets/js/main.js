@@ -115,3 +115,28 @@ if (videoElement && videoTitleEl && videoDescEl && prevBtn && nextBtn) {
     loadVideo(currentVideoIndex + 1);
   });
 }
+
+// --- Moments Carousel ---
+const momentsTrack = document.getElementById("momentsTrack");
+const momentsPrev = document.getElementById("momentsPrev");
+const momentsNext = document.getElementById("momentsNext");
+
+if (momentsTrack && momentsPrev && momentsNext) {
+  let momentsIndex = 0;
+  const momentSlides = document.querySelectorAll(".moments-slide");
+
+  function updateMomentsCarousel() {
+    const offset = momentsIndex * -86; // percentage shift
+    momentsTrack.style.transform = `translateX(${offset}%)`;
+  }
+
+  momentsPrev.addEventListener("click", () => {
+    momentsIndex = Math.max(0, momentsIndex - 1);
+    updateMomentsCarousel();
+  });
+
+  momentsNext.addEventListener("click", () => {
+    momentsIndex = Math.min(momentSlides.length - 1, momentsIndex + 1);
+    updateMomentsCarousel();
+  });
+}

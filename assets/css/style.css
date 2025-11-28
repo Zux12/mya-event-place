@@ -219,12 +219,13 @@ video {
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff4a8; /* light pastel yellow */
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 24px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 }
+
 
 
 .hero h1 {
